@@ -4,7 +4,27 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>text-widget-project</title>
+    <meta
+      name="description"
+      content="A local-first collection of Markdown text widgets with a Monokai Pro theme."
+    />
+    <script>
+      ;(() => {
+        try {
+          const stored = localStorage.getItem('text-widgets:theme')
+          const theme =
+            stored === 'light' || stored === 'dark'
+              ? stored
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light'
+          document.documentElement.dataset.theme = theme
+        } catch {
+          document.documentElement.dataset.theme = 'light'
+        }
+      })()
+    </script>
+    <title>Text Widgets</title>
   </head>
   <body>
     <div id="root"></div>
