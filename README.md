@@ -71,7 +71,7 @@ port 8080, with SPA fallback, gzip, asset caching, and basic security headers.
 ## Session export
 
 The full OpenCode build session, including planning decisions and implementation notes, is
-available as a [Markdown export](docs/session-97028b16-2a89-46cb-85f3-1a74aee071be.md).
+available as a [Markdown export](docs/session-174a3795-0857-4eed-9955-7ff6ff26eb45.md).
 
 ## Storage
 
