@@ -88,6 +88,7 @@ back to in-memory state.
 ```text
 src/
   components/       Header, TextWidget, MarkdownPreview, icons
+  components/ui/    Button, IconButton, ToggleGroup, Textarea
   hooks/            useWidgets (CRUD + persistence), useTheme
   lib/storage.ts    Validated localStorage access
   test/             Vitest setup and matchMedia helper

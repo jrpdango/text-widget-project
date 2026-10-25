@@ -1,5 +1,6 @@
 import type { Theme } from '../types';
 import { MarkdownIcon, MoonIcon, PlusIcon, SunIcon } from './Icons';
+import { Button, IconButton } from './ui';
 
 interface HeaderProps {
   theme: Theme;
@@ -21,19 +22,13 @@ export function Header({ theme, onAddWidget, onToggleTheme }: HeaderProps) {
         </div>
 
         <div className="header-actions">
-          <button type="button" className="button button--primary" onClick={onAddWidget}>
+          <Button onClick={onAddWidget}>
             <PlusIcon className="icon" />
             Add widget
-          </button>
-          <button
-            type="button"
-            className="icon-button theme-toggle"
-            aria-label={`Switch to ${nextTheme} theme`}
-            title={`Switch to ${nextTheme} theme`}
-            onClick={onToggleTheme}
-          >
+          </Button>
+          <IconButton label={`Switch to ${nextTheme} theme`} onClick={onToggleTheme}>
             {theme === 'dark' ? <SunIcon className="icon" /> : <MoonIcon className="icon" />}
-          </button>
+          </IconButton>
         </div>
       </div>
     </header>

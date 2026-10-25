@@ -2,6 +2,7 @@ import { Header } from './components/Header';
 import { TextWidget } from './components/TextWidget';
 import { useTheme } from './hooks/useTheme';
 import { useWidgets } from './hooks/useWidgets';
+import './components/ui/ui.css';
 import './App.css';
 
 function App() {
