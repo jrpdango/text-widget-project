@@ -8,7 +8,7 @@
 
   /* Monokai Pro Light */
   --bg: #faf4f2;
-  --bg-glow: rgba(112, 88, 190, 0.12);
+  --bg-glow: rgba(181, 44, 89, 0.1);
   --bg-glow-alt: rgba(28, 140, 168, 0.08);
   --surface: #fffaf8;
   --surface-2: #f2e8e4;
@@ -19,9 +19,9 @@
   --text: #29242a;
   --text-muted: #6e6469;
   --text-faint: #756a6f;
-  --accent: #7058be;
-  --accent-strong: #5b46a3;
-  --accent-soft: rgba(112, 88, 190, 0.1);
+  --accent: #b52c59;
+  --accent-strong: #962248;
+  --accent-soft: rgba(181, 44, 89, 0.1);
   --accent-contrast: #fffaf8;
   --danger: #e14775;
   --danger-soft: rgba(225, 71, 117, 0.1);
@@ -66,9 +66,9 @@
   --text: #fcfcfa;
   --text-muted: #b8b6b8;
   --text-faint: #a09ea0;
-  --accent: #ab9df2;
-  --accent-strong: #c9bfff;
-  --accent-soft: rgba(171, 157, 242, 0.14);
+  --accent: #fc9867;
+  --accent-strong: #ffb388;
+  --accent-soft: rgba(252, 152, 103, 0.14);
   --accent-contrast: #221f22;
   --danger: #ff6188;
   --danger-soft: rgba(255, 97, 136, 0.12);
