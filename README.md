@@ -1,7 +1,7 @@
 # Text Widgets
 
 A local-first collection of Markdown text widgets. Add as many widgets as you like, write in
-plain text or Markdown, preview the rendered result, and switch between Monokai Pro light and
+plain text or Markdown, preview the rendered result, and switch between light and
 dark themes.
 
 ## Features
@@ -11,7 +11,7 @@ dark themes.
   syntax-highlighted code blocks.
 - Live character count; the editor comfortably handles 1,000+ characters.
 - Delete widgets immediately.
-- Light/dark theme using Monokai Pro and Monokai Pro Light.
+- Light/dark theme toggle.
 - Theme follows the OS preference until you toggle it; an explicit choice is remembered.
 - Widgets, text, and theme choice persist in `localStorage`.
 - Markdown is rendered without raw HTML. Images are stripped and links open safely in a new tab.

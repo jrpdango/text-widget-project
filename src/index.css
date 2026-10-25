@@ -6,7 +6,6 @@
   --radius-lg: 16px;
   --content-width: 880px;
 
-  /* Monokai Pro Light */
   --bg: #faf4f2;
   --bg-glow: rgba(181, 44, 89, 0.1);
   --bg-glow-alt: rgba(28, 140, 168, 0.08);
@@ -31,7 +30,6 @@
   --header-bg: rgba(250, 244, 242, 0.88);
   --shadow: 0 20px 50px -32px rgba(41, 36, 42, 0.42), 0 2px 8px -4px rgba(41, 36, 42, 0.12);
 
-  /* Monokai Pro Light syntax (darkened for readable contrast on light surfaces) */
   --syntax-comment: #6d6363;
   --syntax-red: #b52c59;
   --syntax-orange: #a63f18;
@@ -53,7 +51,6 @@
 }
 
 :root[data-theme='dark'] {
-  /* Monokai Pro */
   --bg: #2d2a2e;
   --bg-glow: rgba(171, 157, 242, 0.1);
   --bg-glow-alt: rgba(120, 220, 232, 0.05);
@@ -78,7 +75,6 @@
   --header-bg: rgba(45, 42, 46, 0.88);
   --shadow: 0 24px 60px -30px rgba(0, 0, 0, 0.8), 0 2px 10px -4px rgba(0, 0, 0, 0.45);
 
-  /* Monokai Pro syntax */
   --syntax-comment: #727072;
   --syntax-red: #ff6188;
   --syntax-orange: #fc9867;

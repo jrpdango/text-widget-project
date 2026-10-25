@@ -521,7 +521,7 @@
   background: color-mix(in srgb, var(--surface-2) 45%, transparent);
 }
 
-/* Monokai syntax highlighting (highlight.js token classes) */
+/* Syntax highlighting (highlight.js token classes) */
 
 .hljs-comment,
 .hljs-quote {
