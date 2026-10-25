@@ -31,23 +31,30 @@ pnpm dev
 
 Open the URL printed by Vite (usually <http://localhost:5173>).
 
+## Running tests
+
+```bash
+pnpm test        # Run the full Vitest suite once
+pnpm test:watch  # Re-run tests in watch mode
+```
+
+Tests use Vitest, Testing Library, and jsdom. They cover widget creation, ordering, focus,
+editing, 1,000+ character content, character counts, deletion, localStorage hydration and
+malformed data, Markdown rendering, GFM tables/task lists, syntax highlighting, HTML/image
+safety, per-widget preview toggles, preview accessibility, and theme behavior (system default,
+OS tracking, explicit choice, persistence).
+
 ## Quality checks
 
 ```bash
-pnpm test         # Vitest + Testing Library
-pnpm lint         # ESLint
-pnpm format       # Prettier write
-pnpm format:check # Prettier check (CI-friendly)
-pnpm build        # TypeScript check + production build
+pnpm lint
+pnpm format
+pnpm format:check
+pnpm build
 ```
 
 Formatting is configured in `.prettierrc.json` with semicolons enabled and single quotes to match
 the existing code style.
-
-The test suite covers widget creation, ordering, focus, editing, 1,000+ character content,
-character counts, deletion, localStorage hydration and malformed data, Markdown rendering,
-GFM tables/task lists, syntax highlighting, HTML/image safety, per-widget preview toggles, and
-theme behavior (system default, OS tracking, explicit choice, persistence).
 
 ## Docker
 
@@ -60,6 +67,11 @@ docker run --rm -p 8080:8080 text-widgets
 
 Open <http://localhost:8080>. The container serves the static production build with Nginx on
 port 8080, with SPA fallback, gzip, asset caching, and basic security headers.
+
+## Session export
+
+The full OpenCode build session, including planning decisions and implementation notes, is
+available as a [Markdown export](docs/session-97028b16-2a89-46cb-85f3-1a74aee071be.md).
 
 ## Storage
 
@@ -80,6 +92,7 @@ src/
   lib/storage.ts    Validated localStorage access
   test/             Vitest setup and matchMedia helper
   App.tsx           Page layout
+docs/               OpenCode session export
 Dockerfile          Multi-stage build
 nginx.conf          Nginx site configuration
 ```
