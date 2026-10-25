@@ -26,7 +26,7 @@ export function MarkdownPreview({ content }: MarkdownPreviewProps) {
   }
 
   return (
-    <div className="markdown-body">
+    <div className="markdown-body" role="region" aria-label="Markdown preview" tabIndex={0}>
       <Markdown
         remarkPlugins={[remarkGfm]}
         rehypePlugins={[rehypeHighlight]}

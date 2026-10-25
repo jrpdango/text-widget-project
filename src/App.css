@@ -353,10 +353,36 @@
 
 .markdown-body {
   min-height: 210px;
+  max-height: min(55vh, 440px);
   padding: 8px 6px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
   overflow-wrap: anywhere;
   font-size: 15.5px;
   line-height: 1.72;
+}
+
+.markdown-body::-webkit-scrollbar {
+  width: 10px;
+}
+
+.markdown-body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.markdown-body::-webkit-scrollbar-thumb {
+  border: 2px solid transparent;
+  border-radius: 999px;
+  background: var(--border-strong);
+  background-clip: padding-box;
+}
+
+.markdown-body::-webkit-scrollbar-thumb:hover {
+  background: var(--text-faint);
 }
 
 .markdown-body > :first-child {

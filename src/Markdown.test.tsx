@@ -104,6 +104,20 @@ describe('markdown preview', () => {
     expect(screen.getByText('After')).toBeInTheDocument();
   });
 
+  it('exposes the scrollable preview as a labeled, keyboard-focusable region', async () => {
+    const user = userEvent.setup();
+    render(<App />);
+
+    await addWidgetWith(user, '# Scrollable');
+    await showPreview(user);
+
+    const preview = screen.getByRole('region', { name: 'Markdown preview' });
+    expect(preview).toHaveAttribute('tabindex', '0');
+
+    preview.focus();
+    expect(preview).toHaveFocus();
+  });
+
   it('toggles Write/Preview independently for each widget', async () => {
     const user = userEvent.setup();
     render(<App />);
