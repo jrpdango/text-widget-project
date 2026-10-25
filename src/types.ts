@@ -1,6 +1,6 @@
 export interface WidgetData {
-  id: string
-  content: string
+  id: string;
+  content: string;
 }
 
-export type Theme = 'light' | 'dark'
+export type Theme = 'light' | 'dark';

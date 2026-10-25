@@ -1,12 +1,12 @@
-import { Header } from './components/Header'
-import { TextWidget } from './components/TextWidget'
-import { useTheme } from './hooks/useTheme'
-import { useWidgets } from './hooks/useWidgets'
-import './App.css'
+import { Header } from './components/Header';
+import { TextWidget } from './components/TextWidget';
+import { useTheme } from './hooks/useTheme';
+import { useWidgets } from './hooks/useWidgets';
+import './App.css';
 
 function App() {
-  const { widgets, focusId, addWidget, updateWidget, deleteWidget } = useWidgets()
-  const { theme, toggleTheme } = useTheme()
+  const { widgets, focusId, addWidget, updateWidget, deleteWidget } = useWidgets();
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <div className="app">
@@ -20,8 +20,7 @@ function App() {
             </span>
             <h2 id="empty-state-title">No widgets yet</h2>
             <p>
-              Add a widget, then write in plain text or Markdown. Everything stays in your
-              browser.
+              Add a widget, then write in plain text or Markdown. Everything stays in your browser.
             </p>
           </section>
         ) : (
@@ -46,7 +45,7 @@ function App() {
         <span>Saved locally</span>
       </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,7 +1,7 @@
-import type { Components } from 'react-markdown'
-import Markdown from 'react-markdown'
-import rehypeHighlight from 'rehype-highlight'
-import remarkGfm from 'remark-gfm'
+import type { Components } from 'react-markdown';
+import Markdown from 'react-markdown';
+import rehypeHighlight from 'rehype-highlight';
+import remarkGfm from 'remark-gfm';
 
 const components: Components = {
   a({ href, children, title }) {
@@ -9,20 +9,20 @@ const components: Components = {
       <a href={href} title={title} target="_blank" rel="noopener noreferrer">
         {children}
       </a>
-    )
+    );
   },
   img() {
-    return null
+    return null;
   },
-}
+};
 
 interface MarkdownPreviewProps {
-  content: string
+  content: string;
 }
 
 export function MarkdownPreview({ content }: MarkdownPreviewProps) {
   if (!content.trim()) {
-    return <p className="preview-empty">Nothing to preview yet.</p>
+    return <p className="preview-empty">Nothing to preview yet.</p>;
   }
 
   return (
@@ -35,5 +35,5 @@ export function MarkdownPreview({ content }: MarkdownPreviewProps) {
         {content}
       </Markdown>
     </div>
-  )
+  );
 }

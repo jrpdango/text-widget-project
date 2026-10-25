@@ -34,10 +34,15 @@ Open the URL printed by Vite (usually <http://localhost:5173>).
 ## Quality checks
 
 ```bash
-pnpm test     # Vitest + Testing Library
-pnpm lint     # ESLint
-pnpm build    # TypeScript check + production build
+pnpm test         # Vitest + Testing Library
+pnpm lint         # ESLint
+pnpm format       # Prettier write
+pnpm format:check # Prettier check (CI-friendly)
+pnpm build        # TypeScript check + production build
 ```
+
+Formatting is configured in `.prettierrc.json` with semicolons enabled and single quotes to match
+the existing code style.
 
 The test suite covers widget creation, ordering, focus, editing, 1,000+ character content,
 character counts, deletion, localStorage hydration and malformed data, Markdown rendering,
@@ -58,10 +63,10 @@ port 8080, with SPA fallback, gzip, asset caching, and basic security headers.
 
 ## Storage
 
-| Key                 | Contents                               |
-| ------------------- | -------------------------------------- |
-| `text-widgets:v1`   | JSON array of `{ id, content }` widgets |
-| `text-widgets:theme`| `"light"` or `"dark"`                  |
+| Key                  | Contents                                |
+| -------------------- | --------------------------------------- |
+| `text-widgets:v1`    | JSON array of `{ id, content }` widgets |
+| `text-widgets:theme` | `"light"` or `"dark"`                   |
 
 Storage failures (private mode, quota, malformed JSON) are handled gracefully; the app falls
 back to in-memory state.

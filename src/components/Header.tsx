@@ -1,14 +1,14 @@
-import type { Theme } from '../types'
-import { MarkdownIcon, MoonIcon, PlusIcon, SunIcon } from './Icons'
+import type { Theme } from '../types';
+import { MarkdownIcon, MoonIcon, PlusIcon, SunIcon } from './Icons';
 
 interface HeaderProps {
-  theme: Theme
-  onAddWidget: () => void
-  onToggleTheme: () => void
+  theme: Theme;
+  onAddWidget: () => void;
+  onToggleTheme: () => void;
 }
 
 export function Header({ theme, onAddWidget, onToggleTheme }: HeaderProps) {
-  const nextTheme = theme === 'dark' ? 'light' : 'dark'
+  const nextTheme = theme === 'dark' ? 'light' : 'dark';
 
   return (
     <header className="app-header">
@@ -32,14 +32,10 @@ export function Header({ theme, onAddWidget, onToggleTheme }: HeaderProps) {
             title={`Switch to ${nextTheme} theme`}
             onClick={onToggleTheme}
           >
-            {theme === 'dark' ? (
-              <SunIcon className="icon" />
-            ) : (
-              <MoonIcon className="icon" />
-            )}
+            {theme === 'dark' ? <SunIcon className="icon" /> : <MoonIcon className="icon" />}
           </button>
         </div>
       </div>
     </header>
-  )
+  );
 }

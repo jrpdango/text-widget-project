@@ -1,32 +1,32 @@
-import { lazy, Suspense, useEffect, useRef, useState } from 'react'
-import type { WidgetData } from '../types'
-import { TrashIcon } from './Icons'
+import { lazy, Suspense, useEffect, useRef, useState } from 'react';
+import type { WidgetData } from '../types';
+import { TrashIcon } from './Icons';
 
 const MarkdownPreview = lazy(async () => {
-  const module = await import('./MarkdownPreview')
-  return { default: module.MarkdownPreview }
-})
+  const module = await import('./MarkdownPreview');
+  return { default: module.MarkdownPreview };
+});
 
-type Mode = 'write' | 'preview'
+type Mode = 'write' | 'preview';
 
 interface TextWidgetProps {
-  widget: WidgetData
-  autoFocus: boolean
-  onChange: (id: string, content: string) => void
-  onDelete: (id: string) => void
+  widget: WidgetData;
+  autoFocus: boolean;
+  onChange: (id: string, content: string) => void;
+  onDelete: (id: string) => void;
 }
 
 export function TextWidget({ widget, autoFocus, onChange, onDelete }: TextWidgetProps) {
-  const [mode, setMode] = useState<Mode>('write')
-  const textareaRef = useRef<HTMLTextAreaElement>(null)
-  const editorId = `widget-editor-${widget.id}`
-  const characterCount = widget.content.length
+  const [mode, setMode] = useState<Mode>('write');
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+  const editorId = `widget-editor-${widget.id}`;
+  const characterCount = widget.content.length;
 
   useEffect(() => {
     if (autoFocus) {
-      textareaRef.current?.focus()
+      textareaRef.current?.focus();
     }
-  }, [autoFocus])
+  }, [autoFocus]);
 
   return (
     <article className="widget" aria-label="Text widget">
@@ -91,5 +91,5 @@ export function TextWidget({ widget, autoFocus, onChange, onDelete }: TextWidget
         <span className="widget-hint">Markdown</span>
       </div>
     </article>
-  )
+  );
 }
