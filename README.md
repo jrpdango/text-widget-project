@@ -156,6 +156,7 @@ curl -X POST localhost:3000/api/widgets \
 
 - [Initial build session](docs/session-174a3795-0857-4eed-9955-7ff6ff26eb45.md)
 - [Next.js and MongoDB migration session](docs/session-4570206b-b61c-4c13-a0f3-c958691e5925.md)
+- [App audit and cleanup session](docs/session-368aaa25-528b-4c27-8c42-f89281aa624f.md)
 
 ## Storage
 
