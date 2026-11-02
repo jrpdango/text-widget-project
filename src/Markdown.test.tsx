@@ -5,8 +5,11 @@ import App from './App';
 type User = ReturnType<typeof userEvent.setup>;
 
 async function addWidgetWith(user: User, markdown: string) {
+  await waitFor(() => {
+    expect(screen.getByRole('button', { name: 'Add widget' })).toBeEnabled();
+  });
   await user.click(screen.getByRole('button', { name: 'Add widget' }));
-  const textarea = screen.getAllByRole('textbox')[0];
+  const textarea = screen.getAllByRole('textbox')[0] as HTMLTextAreaElement;
   await user.click(textarea);
   await user.paste(markdown);
 }

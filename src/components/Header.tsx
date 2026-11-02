@@ -1,14 +1,15 @@
-import type { Theme } from '../types';
-import { MarkdownIcon, MoonIcon, PlusIcon, SunIcon } from './Icons';
-import { Button, IconButton } from './ui';
+import { MarkdownIcon, MoonIcon, PlusIcon, SunIcon } from '@/components/Icons';
+import { Button, IconButton } from '@/components/ui';
+import type { Theme } from '@/types';
 
 interface HeaderProps {
   theme: Theme;
   onAddWidget: () => void;
   onToggleTheme: () => void;
+  addDisabled?: boolean;
 }
 
-export function Header({ theme, onAddWidget, onToggleTheme }: HeaderProps) {
+export function Header({ theme, onAddWidget, onToggleTheme, addDisabled = false }: HeaderProps) {
   const nextTheme = theme === 'dark' ? 'light' : 'dark';
 
   return (
@@ -22,7 +23,7 @@ export function Header({ theme, onAddWidget, onToggleTheme }: HeaderProps) {
         </div>
 
         <div className="header-actions">
-          <Button onClick={onAddWidget}>
+          <Button onClick={onAddWidget} disabled={addDisabled}>
             <PlusIcon className="icon" />
             Add widget
           </Button>

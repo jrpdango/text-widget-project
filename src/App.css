@@ -484,6 +484,69 @@
   letter-spacing: 0.3px;
 }
 
+/* Loading, load error, and save status */
+
+.app-loading,
+.app-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 240px;
+  padding: 48px 28px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+  text-align: center;
+}
+
+.app-loading p,
+.app-error p {
+  max-width: 430px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+.app-error h2 {
+  margin: 0;
+  color: var(--text);
+  font-size: 20px;
+  font-weight: 650;
+  letter-spacing: -0.25px;
+}
+
+.widget-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.widget-status > span:empty {
+  display: none;
+}
+
+.widget-status--error {
+  color: var(--danger);
+}
+
+.widget-retry {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.widget-retry:hover {
+  color: var(--accent-strong);
+}
+
 @media (max-width: 560px) {
   .app-header__inner {
     min-height: 64px;
